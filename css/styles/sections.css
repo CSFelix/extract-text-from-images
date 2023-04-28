@@ -1,0 +1,134 @@
+/*	
+	******************
+	** Main Section **
+	******************
+*/
+#mainSection {
+	width: 100vw;
+	height: 100vh;
+	color: #f6f6ff;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+/*
+	*******************************
+	** Image Extractor Container **
+	*******************************
+*/
+#imageTextExtractorContainer {
+	width: 80vw;
+	height: 80vh;
+	border-radius: 20px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+
+
+/*
+	********************
+	** Extractor Area **
+	********************
+*/
+#extractorArea {
+	width: 100%;
+	height: 80%;
+	background-color: #d7ecff;
+	border-radius: 20px 20px 0px 0px;
+	border-bottom: 2px solid #363636;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+}
+
+
+
+/*
+	*******************
+	** Uploader Area **
+	*******************
+*/
+#uploaderArea {
+	width: 100%;
+	height: 20%;
+	background-color: #7159c1;
+	border-radius: 0px 0px 20px 20px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+}
+
+#uploaderFileLabel {
+    display: inline-block;
+    cursor: pointer;
+    opacity: 0.9;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+
+    width: 100%;
+    max-width: 250px;
+    height: 50px;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#uploaderFileLabel:hover {
+	opacity: 1;
+	transform: translateY(-2px);
+}
+
+#fileButton {
+	width: 35%;
+	height: 100%;
+	font-weight: bold;
+	border-radius: 20px 0px 0px 20px;
+	background-color: #363636;
+
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+	font-size: 1.05em;
+}
+
+#fileName {
+	width: 65%;
+	height: 100%;
+	border-radius: 0px 20px 20px 0px;
+	background-color: #f6f6ff;
+	color: #363636;
+
+	display: flex;
+	text-align: center;
+	align-items: center;
+	padding: 5px;
+	font-size: 1.05em;
+}
+
+input[type="file"] {
+	display: none;
+}
+
+#uploaderFileSpan {
+	font-weight: bold;
+	font-size: 1em;
+}
