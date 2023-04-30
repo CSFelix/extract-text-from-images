@@ -1,5 +1,5 @@
 <h1 align="center">📝 Image Text Extractor 📝</h1>
-<p align="center"><i>Extract text from emojis</i></p>
+<p align="center"><i>Extract text from images</i></p>
 
 <br />
 
