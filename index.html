@@ -18,7 +18,9 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
 
 		<!-- css libraries -->
-		
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+		<link rel="stylesheet" type="text/css" href="./css/libraries/vanillatoasts.css" />
+		<link rel="stylesheet" type="text/css" href="./css/libraries/hint.min.css" />
 
 		<!-- css styles -->
 		<link rel="stylesheet" type="text/css" href="./css/styles/global.css" />
@@ -26,10 +28,11 @@
 		
 
 		<!-- js libraries -->
-		
+		<script type="text/javascript" src="./js/libraries/vanillatoasts.js" defer></script>
+		<script type="text/javascript" src="https://unpkg.com/tesseract.js@v2.0.0-alpha.13/dist/tesseract.min.js" defer></script>
 
 		<!-- js scripts -->
-		
+		<script type="text/javascript" src="./js/scripts/main.js" defer></script>
 	</head>
 
 	<body>
@@ -57,7 +60,29 @@
 					********************
 				 -->
 				<div id="extractorArea">
-					
+					<div id="extractorTitleContainer">
+						<h1 id="extractorTitle">📝 Image Text Extractor</h1>
+					</div>
+
+					<div id="extractorContainer">
+						<img id="extractorImage" onerror="this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='" />
+
+						<span id="extractorArrow" class="material-icons hint--bottom hint--bounce" aria-label="Extract Text">rocket_launch</span>
+
+						<div id="extractorText">
+							<span id="extractedTextField"></span>
+
+							<span id="copyExtractedText" class="material-icons hint--bottom hint--bounce" aria-label="Copy Text">content_copy</span>
+						</div>
+					</div>
+
+					<div id="languageSelectorContainer">
+						<select name="languageSelector" id="languageSelector">
+						    <option value="eng" selected>English</option>
+						    <option value="jpn">Japanese</option>
+							<option value="por">Portuguese</option>
+						</select>
+					</div>
 				</div>
 
 
@@ -69,11 +94,11 @@
 				 -->
 				<div id="uploaderArea">
 					<label for="uploaderFileInput" id="uploaderFileLabel">
-						<span id="fileButton">Browse File</span>
-						<span id="fileName"></span>
+						<span id="fileButtonSpan">Browse File</span>
+						<span id="fileNameSpan"></span>
 					</label>
 
-					<input id="uploaderFileInput" name="uploaderFileInput" type="file" accept="image/*" aria-label="File Browser" />
+					<input id="uploaderFileInput" name="uploaderFileInput" type="file" accept="image/png, image/jpeg, image/webp, image/avif, image/jfif" aria-label="File Browser" />
 
 					<span id="uploaderFileSpan">Upload any image with English Text!</span>
 				</div>
